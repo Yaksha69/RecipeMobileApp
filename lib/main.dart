@@ -14,11 +14,13 @@ void main() {
             Text('gitnang text are', style: TextStyle(
               fontSize: 24,
               foreground: Paint()
-                ..shader = LinearGradient(colors: [
-                  Colors.red,
-                  Colors.blue,
-                  Colors.green,
-                ]).createShader(Rect.fromLTWH(150.0, 10.0, 200.0, 70.0)),
+                ..shader = LinearGradient(
+                  colors: [
+                    Colors.red, // dark gray
+                    Colors.green, // medium gray
+                    Colors.blue, // light gray
+                  ],
+                ).createShader(Rect.fromLTWH(100.0, 10.0, 200.0, 70.0)),
               fontWeight: FontWeight.bold,
               decorationColor: Colors.red,
               decoration: TextDecoration.underline,
