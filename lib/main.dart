@@ -27,7 +27,7 @@ class Profile extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  'User Profile',
+                  'Recipe App',
                   style: TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
@@ -38,139 +38,74 @@ class Profile extends StatelessWidget {
           ),
           Container(
             alignment: Alignment.center,
+            width: 300,
             child: Column(
               children: [
-                Icon(
-                  Icons.android_outlined,
-                  size: 100,
-                  color: Colors.green,
-                ),
+                  TextFormField(
+                    decoration: const InputDecoration(
+                      border: UnderlineInputBorder(),
+                      labelText: 'Enter your ingredients',
+                    ),
+                  ),
               ],
             ),
           ),
           Container(
             alignment: Alignment.topLeft,
             margin: EdgeInsets.only(top: 10, left: 20),
-            child: Column(
+            child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  'Name',
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.blue,
+                Card(
+                  margin: const EdgeInsets.all(10),
+                  child: SizedBox(
+                    width: 120,
+                    height: 120,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(
+                          Icons.person,
+                          size: 80,
+                          color: Colors.blue,
+                        ),
+                        Text(
+                          'Adobo',
+                          style: TextStyle(
+                            fontSize: 15,
+                            fontStyle: FontStyle.italic,
+                            color: Colors.black,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
-                Text(
-                  'Terdy',
-                  style: TextStyle(
-                    fontSize: 15,
-                    fontStyle: FontStyle.italic,
-                    color: Colors.black,
+                Card(
+                  margin: const EdgeInsets.fromLTRB(30, 10, 10, 10),
+                  child: SizedBox(
+                    width: 120,
+                    height: 120,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(Icons.person,
+                         size: 80,
+                          color: Colors.blue
+                        ),
+                        Text(
+                          'Pork sinigang',
+                          style: TextStyle(
+                            fontSize: 15,
+                            fontStyle: FontStyle.italic,
+                            color: Colors.black,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ],
-            ),
-          ),
-          Container(
-            alignment: Alignment.topLeft,
-            margin: EdgeInsets.only(top: 10, left: 20),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  'Email',
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.blue,
-                  ),
-                ),
-                Text(
-                  'terdy@g.com',
-                  style: TextStyle(
-                    fontSize: 15,
-                    fontStyle: FontStyle.italic,
-                    color: Colors.black,
-                  ),
-                ),
-              ],
-            ),
-          ),
-          Container(
-            alignment: Alignment.topLeft,
-            margin: EdgeInsets.only(top: 10, left: 20),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  'Company',
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.blue,
-                  ),
-                ),
-                Text(
-                  'QWERTYUI.company',
-                  style: TextStyle(
-                    fontSize: 15,
-                    fontStyle: FontStyle.italic,
-                    color: Colors.black,
-                  ),
-                ),
-              ],
-            ),
-          ),
-          Container(
-            alignment: Alignment.topLeft,
-            margin: EdgeInsets.only(top: 10, left: 20),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  'Contact Number',
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.blue,
-                  ),
-                ),
-                Text(
-                  '1234567890',
-                  style: TextStyle(
-                    fontSize: 15,
-                    fontStyle: FontStyle.italic,
-                    color: Colors.black,
-                  ),
-                ),
-              ],
-            ),
-          ),
-          Container(
-            margin: EdgeInsets.only(top: 100, bottom: 20),
-            child: ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                iconColor: Colors.green,
-                padding: EdgeInsets.all(20),
-                fixedSize: Size(300, 50),
-              ),
-              onPressed: (){},
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Icon(Icons.edit, size: 20),
-                  SizedBox(width: 5),
-                  Text(
-                    'Edit Profile',
-                    style: TextStyle(
-                      fontSize: 20,
-                      color: Colors.black,
-                      ),
-                  ),
-                ],
-              ),
             ),
           ),
         ],
