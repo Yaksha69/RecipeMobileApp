@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:recipeapp/pages/recipe.dart';
-import 'package:recipeapp/pages/itemcard.dart';
+import 'package:recipeapp/pages/item_card.dart';
 
 class ListItem extends StatefulWidget {
   const ListItem({super.key});
@@ -53,6 +53,16 @@ class _ListItemState extends State<ListItem> {
           crossAxisSpacing: 16,
           mainAxisSpacing: 16,
           children: recipes.map((recipe) => Itemcard(recipe: recipe)).toList(),
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.pushNamed(context, '/add');
+        },
+        backgroundColor: Colors.green,
+        child: const Icon(
+          Icons.add,
+          color: Colors.white,
         ),
       ),
     );
