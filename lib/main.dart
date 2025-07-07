@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
 
-
-import 'pages/dashboard.dart';
-import 'pages/list_item.dart';
-import 'pages/add_recipe.dart';
+import 'world_time/home.dart';
+import 'world_time/loading.dart';
+import 'world_time/choose_location.dart';
 
 void main() {
   runApp(
     MaterialApp(
       routes: {
-        '/': (context) => const ListItem(),
-        '/list': (context) =>  ListItem(),
-        '/add': (context) => const Addrecipe(),
+        '/': (context) => const Loading(),
+        'home': (context) => const Home(),
+        '/location': (context) => const ChooseLocation(),
       },
     ),
   );

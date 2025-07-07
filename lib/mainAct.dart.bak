@@ -1,0 +1,17 @@
+import 'package:flutter/material.dart';
+
+import 'pages/dashboard.dart';
+import 'pages/list_item.dart';
+import 'pages/add_recipe.dart';
+
+void main() {
+  runApp(
+    MaterialApp(
+      routes: {
+        '/': (context) => const Dashboard(),
+        '/list': (context) =>  ListItem(),
+        '/add': (context) => const Addrecipe(),
+      },
+    ),
+  );
+}
