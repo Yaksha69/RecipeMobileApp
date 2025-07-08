@@ -14,11 +14,14 @@ class _LoadingState extends State<Loading> {
   String time = 'loading';
 
   void setupWorldTime() async {
-    WorldTimeService instance = WorldTimeService(location: 'India', urlCont: 'Asia', urlCount: 'Manila');
+    WorldTimeService instance = WorldTimeService(location: 'Manila', urlCont: 'Asia', urlCount: 'Manila');
     await instance.getTime();
-    print(instance.time);
-    setState(() {
-      time = instance.time ?? 'No time available';
+    Navigator.pushReplacementNamed(context, '/home', arguments: {
+      'location': instance.location,
+      'time': instance.time,
+      'urlCont': instance.urlCont,
+      'urlCount': instance.urlCount,
+      'isDaytime': instance.isDaytime,
     });
   }
 
@@ -33,7 +36,7 @@ class _LoadingState extends State<Loading> {
     return Scaffold(
       body: Padding(
         padding: EdgeInsets.all(50.0),
-        child: Text(time),
+        child: Text('loading'),
       )
     );
   }

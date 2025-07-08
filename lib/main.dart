@@ -9,7 +9,7 @@ void main() {
     MaterialApp(
       routes: {
         '/': (context) => const Loading(),
-        'home': (context) => const Home(),
+        '/home': (context) => const Home(),
         '/location': (context) => const ChooseLocation(),
       },
     ),
