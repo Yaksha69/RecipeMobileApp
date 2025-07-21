@@ -28,7 +28,7 @@ class WorldTimeService {
       print(now);
 
       // set
-      isDaytime =  now.hour > 6 && now.hour < 9 ? true: false;
+      isDaytime =  now.hour > 6 && now.hour < 18 ? true: false;
       time = DateFormat.jm().format(now);
 
     } catch (e) {
